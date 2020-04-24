@@ -1,0 +1,8 @@
+var orang = {
+    name: "haritz",
+    surname: "HK",
+  get fullName() {
+      return `${this.name} ${this.surname}`;
+    }
+  };
+  console.log(orang.fullName); 
