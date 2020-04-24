@@ -1,0 +1,26 @@
+function delay(t, v) {
+    return new Promise(function(resolve) { 
+        setTimeout(resolve.bind(null, v), t)
+    });
+ }
+ Promise.prototype.delay = function(t) {
+     return this.then(function(v) {
+         return delay(t, v);
+     });
+ }
+ Promise.resolve("memulai").delay(0).then(function(v) {
+     console.log(v);
+ });
+ Promise.resolve("...").delay(2000).then(function(v) {
+    console.log(v);
+});
+ Promise.resolve("loading").delay(4000).then(function(v) {
+    console.log(v);
+});
+Promise.resolve("...").delay(6000).then(function(v) {
+    console.log(v);
+});
+Promise.resolve("selesai").delay(8000).then(function(v) {
+    console.log(v);
+});
+ 
