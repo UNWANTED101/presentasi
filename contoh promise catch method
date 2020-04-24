@@ -1,0 +1,16 @@
+var p1 = new Promise(function(resolve, reject) {
+    resolve('bisa');
+  });
+  p1.then(function(value) {
+    console.log(value); 
+    return Promise.reject('terjadi kesalahan');
+  })
+  .catch(function(e) 
+  {
+    console.log(e); 
+  })
+  .then(function(){
+    console.log('sudah pulih kembali');
+  }, function () {
+    console.log('asdasdas'); //tidak dijalankan 
+  });
