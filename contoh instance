@@ -1,0 +1,11 @@
+function orang(nama, umur,sapaan)
+{
+    this.name = nama;
+    this.age = umur;
+    this.sapaan = function()
+    {
+        console.log('nama saya ' + this.name + ', saya berumur '+this.age);
+    };
+}
+var manusia = new orang('haritz',22);
+manusia.sapaan();
