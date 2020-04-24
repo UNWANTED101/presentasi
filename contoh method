@@ -1,0 +1,10 @@
+class Orang {
+    constructor(user) {
+      this.username = user;
+    }
+    nama_method() {
+      return "nama saya " + this.username;
+    }
+  }
+  user1 = new Orang("haritz");
+  console.log (user1.nama_method());
