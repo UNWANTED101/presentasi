@@ -1,0 +1,27 @@
+class orang {
+    constructor(user) {
+      this.username = user;
+    }
+    nama_method() {
+      return "nama saya " + this.username;
+    }
+  }
+ class orangtua{ 
+    constructor(umur){
+      this.age = umur;
+    } 
+    getUmur(){
+      return "umur saya "+this.age;
+    }
+  } 
+  class job extends orangtua{
+      constructor(pendidikan,umur){
+          super(umur);
+          this.pd = pendidikan;
+      }
+      show (){
+          return this.getUmur() + ', pendidikan saya ' + this.pd  ;
+      }
+  }
+  user1 = new job("S3 marketing", "22");
+  console.log (user1.show());
