@@ -1,0 +1,16 @@
+  class Orang {
+    constructor() {
+      //this.username = user;
+    }
+    static nama_method() {
+      return "nama saya haritz";
+    }
+    getHello(){
+      //return this.username;
+      return"helloworld";
+    }
+  }
+  console.log(Orang.nama_method());
+ // user1 = new orang("hello wolrd");
+ user2 = new Orang(); 
+ console.log (user2.getHello());
