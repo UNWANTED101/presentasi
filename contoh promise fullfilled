@@ -1,0 +1,16 @@
+const executorFunction = (resolve , reject) =>{
+    const isCoffeeMakerReady = false;
+    if(isCoffeeMakerReady){
+        resolve("kopi berhasil dibuat");
+    } else {
+        reject("mesin kopi tidak bisa digunakan!")
+    }
+}
+const handlerSuccess = resolvedValues => {
+    console.log(resolvedValues);
+}
+const handlerRejected = rejectionReason => {
+    console.log(rejectionReason)
+}
+const makeCoffe = new Promise(executorFunction);
+makeCoffe.then(handlerSuccess,handlerRejected);
