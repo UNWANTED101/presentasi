@@ -1,0 +1,18 @@
+let orang = {
+    name: "Haritz",
+    surname: "HK",
+
+    //properti get
+  get fullName() {
+      return `${this.name} ${this.surname}`;
+    },
+    
+    // properti set
+  set fullName(value) {
+      [this.name, this.surname] = value.split(" ");
+    }
+  };
+  // set fullName is executed with the given value.
+  orang.fullName = "wage rudolf";
+  console.log(orang.name); 
+  console.log(orang.surname);
